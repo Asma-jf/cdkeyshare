@@ -3,18 +3,28 @@ import Container from "../container/Container";
 import styled from "./Navbar.module.css";
 
 function Navbar() {
-  const [isClose, setIsclose] = useState(true); 
-  const toggleNavbar = () => {
-    setIsclose(!isClose); 
-  };
+  // const [isClose, setIsClose] = useState(true); 
+  // const toggleNavbar = () => {
+  //   setIsclose(!isClose); 
+  // };
+  function handleClose(): void {
+    const drawer = document.getElementById('drawer');
+    if (drawer) {
+      const currentMaxHeightPx = parseFloat(drawer.style.maxHeight || '0'); // Parse the numeric part of the string
+      if (currentMaxHeightPx === 105.5) {
+        drawer.style.maxHeight = "0px";
+      } else {
+        drawer.style.maxHeight = "105.5px";
+      }
+    }
+  }
   return (
     // notification navbar
     <div className="navbar">
-      {isClose &&
-    <div className={`${styled.notification} ${isClose ? '' : styled.open}`}>
+    <div className={`${styled.notification} `} id="drawer">
       <Container>
         <div className={styled.notificationNavbar} >
-          <span onClick={toggleNavbar}
+          <span onClick={handleClose}
             id="notification-box-1"
             className={styled.notification_box_close}
           ></span>
@@ -52,7 +62,6 @@ function Navbar() {
         </div>
       </Container>
     </div>
-}
     </div>
   );
 }

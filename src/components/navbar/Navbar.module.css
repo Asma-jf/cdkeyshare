@@ -7,6 +7,16 @@
   padding: 0;
   list-style: none;
 }
+.drawer {
+    transition: transform 0.3s ease-out;
+    background-color: red;
+    max-height: 105.5px;
+    transition: max-hight 1s ease-out;
+  }
+  
+  .drawer-closed {
+    transform: translateX(-100%);
+  }
 .notificationNavbar {
   display: flex;
   flex-direction: row-reverse;
@@ -24,11 +34,7 @@
   overflow: hidden;
   transition: max-height 1s ease-in-out;
   overflow: hidden;
-  max-height: 500px; /* Adjust based on your content size */
 }
-.notification.open {
-    max-height: 1000px; /* Adjust based on your content size */
-  }
 .notification_box_button {
   color: #fff;
   background-color: #001ae0 !important;
