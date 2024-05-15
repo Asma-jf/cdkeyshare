@@ -1,0 +1,57 @@
+@font-face {
+  font-family: iransans;
+  src: url(../font/collection-persian-web-font/iransans/Sans_a4fran3.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notificationNavbar {
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: iransans;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.notification {
+  display: flex;
+  background-image: linear-gradient(45deg, #7c3eb1, #09a5d2);
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+  overflow: hidden;
+  max-height: 500px; /* Adjust based on your content size */
+}
+.notification.open {
+    max-height: 1000px; /* Adjust based on your content size */
+  }
+.notification_box_button {
+  color: #fff;
+  background-color: #001ae0 !important;
+  font-size: 13px;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.notification_box_close::after{
+    content: '\00d7';
+  font-size: 20px;
+}
+.notification_box_close{
+    background-color: #0019ff;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
