@@ -4,7 +4,7 @@ type Tcontainer={
 
 function Container({children}:Tcontainer) {
   return (
-    <div className="p-7 text-right w-full">
+    <div className="p-4 w-full">
       {children}
     </div>
   )
