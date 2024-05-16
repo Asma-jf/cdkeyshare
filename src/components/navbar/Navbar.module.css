@@ -15,14 +15,9 @@ html {
   font-family: iransans;
 }
 .drawer {
-  transition: transform 0.3s ease-out;
   max-height: 105.5px;
-  transition: max-hight 1s ease-out;
 }
 
-.drawer-closed {
-  transform: translateX(-100%);
-}
 .notificationNavbar {
   display: flex;
   font-weight: 500;
@@ -34,9 +29,8 @@ html {
 .notification {
   display: flex;
   background-image: linear-gradient(45deg, #7c3eb1, #09a5d2);
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.3s ease-out;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
   overflow: hidden;
 }
 .notification_box_button {
@@ -222,29 +216,42 @@ a {
 }
 .mainMenu li {
   display: flex;
-  padding: 5px 15px;
+  padding: 5px 13px;
   align-items: center;
-  position: relative
+  position: relative;
 }
 .mainMenu li span {
-  padding: 0 10px;
+  padding: 15px 10px;
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 .subMenu {
   width: 200px;
-  top: 3.5rem;
+  top: 5.5rem;
   right: 0;
   position: absolute;
   background-color: #fff;
   border-radius: 0 0 12px 12px;
   box-shadow: 1px 1px 2px rgba(181, 181, 181, 1);
-  overflow: hidden;
-  z-index: 55;
-  animation-name: submenu;
-  animation-duration: 0.1s;
-  animation-timing-function: linear;
+  visibility: hidden;
+}
+.subMenu li {
+  padding: 10px 0;
+}
+.mainMenu li:hover .subMenu {
+  visibility: visible;
+  top: 4rem;
+  transition: all 0.3s ease-out;
+}
+
+.subMenu li:hover {
+  background: linear-gradient(33deg, #09a5d2 0%, #7c3eb1 80%) !important;
+  border: none;
+}
+.mainMenu ul :nth-child(1) span:hover {
+  border-bottom: 2px solid blue;
 }
 .sub-menu li:hover {
-    padding-left: 0 !important;
-    background: linear-gradient(33deg,#09a5d2 0%,#7c3eb1 80%) !important;
-    color: #fff !important;
-  }
+  padding-left: 0 !important;
+  background: linear-gradient(33deg, #09a5d2 0%, #7c3eb1 80%) !important;
+  color: #fff !important;
+}

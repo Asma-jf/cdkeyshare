@@ -80,11 +80,11 @@ function Navbar() {
       <div className={styled.main_navbar}>
         <ul className="flex">
           <li className="flex flex-row items-center justify-center">
-            <Home />
+            <Home size={18} />
             <Link to="/">خانه</Link>
           </li>
           <li className="flex flex-row items-center justify-center">
-            <Store size={22} />
+            <Store size={18} />
             <Link to="/store">فروشگاه</Link>
           </li>
           <li>
@@ -200,49 +200,28 @@ function Navbar() {
               <i></i>
               <ul className={styled.subMenu}>
                 <li>
-                  <a href="#">
-                    <span>Steam</span>
-                  </a>
+                  <a href="#">Steam</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <span>Origin</span>
-                  </a>
+                  <a href="#">Origin</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <span>Uplay</span>
-                  </a>
+                  <a href="#">Uplay</a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>Battle-Net</span>
-                  </a>
+                  <a href="">Battle-Net</a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>Epic Games</span>
-                  </a>
+                  <a href="">Epic Games</a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>Store Win 10/11</span>
-                  </a>
+                  <a href="">Store Win 10/11</a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>کنسول</span>
-                  </a>
+                  <a href="">کنسول </a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>زیر نویس فارسی</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span>Mobile</span>
-                  </a>
+                  <a href="">Mobile </a>
                 </li>
               </ul>
             </li>
