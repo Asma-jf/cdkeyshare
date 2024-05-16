@@ -3,7 +3,7 @@
   src: url("../../font/collection-persian-web-font/iransans/Sans_a4fran3.ttf")
     format("truetype");
 }
-@import url("../../font/FontAwesome.Pro.6.0.0.Final/web/css/all.min.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +16,8 @@ html {
 }
 .drawer {
   transition: transform 0.3s ease-out;
-  background-color: red;
   max-height: 105.5px;
-  transition: max-hight 0.1s ease-out;
+  transition: max-hight 1s ease-out;
 }
 
 .drawer-closed {
