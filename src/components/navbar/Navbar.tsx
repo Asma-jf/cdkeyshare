@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../container/Container";
 import styled from "./Navbar.module.css";
 import logo from "../../assets/img/logo-min.png";
-import { Home, Store } from "lucide-react";
+import { ChevronDown, Home, Search, Store } from "lucide-react";
 function Navbar() {
   // const [isClose, setIsClose] = useState(true);
   // const toggleNavbar = () => {
@@ -130,7 +130,8 @@ function Navbar() {
               <span>دسته بندی</span>
             </div>
             <div className={styled.search_header}>
-              <span>اسم بازی مورد نظر را تایپ کنید</span>
+              <span className="ml-3">اسم بازی مورد نظر را تایپ کنید</span>
+              <Search size={14} color="orange" spacing={5} />
             </div>
             {isVisible && (
               <span className={styled.selctDropdown}>
@@ -197,7 +198,7 @@ function Navbar() {
           <ul className="flex items-center">
             <li>
               <span>بازی اورجینال PC</span>
-              <i></i>
+              <ChevronDown />
               <ul className={styled.subMenu}>
                 <li>
                   <a href="#">Steam</a>

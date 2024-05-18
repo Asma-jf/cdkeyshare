@@ -1,0 +1,63 @@
+.storepage {
+  background-color: #fafafc;
+}
+.title1 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  font-size: 1rem;
+}
+.title1 a {
+  font-size: 12px !important;
+}
+.searchForm {
+  box-shadow: 0px 8px 6px 0px rgba(83, 40, 160, 0.03);
+  background-color: #fff;
+  border-radius: 50px;
+  width: 100%;
+  padding: 12px;
+  width: 20%;
+  margin-top: 10px;
+}
+.searchForm input {
+  font-size: 14px;
+}
+.block {
+  text-align: right;
+}
+aside img {
+  display: inline !important;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+aside ul {
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 15px;
+  width: 80% !important;
+  text-align: center;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+aside b {
+  font-size: 14px !important;
+  color: #4586ce;
+}
+aside span {
+  font-size: 14px !important;
+}
+aside ul :first-child {
+  border-bottom: 1px solid #dee2e6 !important;
+  border-left: 1px solid #dee2e6 !important;
+}
+aside ul li {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+.cont1 {
+  border-radius: 25px;
+  background-color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

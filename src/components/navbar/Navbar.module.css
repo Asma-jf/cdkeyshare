@@ -74,9 +74,7 @@ html {
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
 }
-.menu_item_icon::before {
-  content: "\f015";
-}
+
 .flex_justify_end span,
 a {
   font-weight: 500;
@@ -107,8 +105,6 @@ a {
   cursor: pointer;
 }
 .select::before {
-  content: "\f107";
-  font-family: "Font Awesome 5 Pro";
   position: absolute;
   left: 11px;
   top: 7%;
@@ -118,6 +114,8 @@ a {
 }
 .search_header {
   padding-right: 10px;
+  display: flex;
+  align-items: center;
 }
 .search_header span {
   color: rgb(190, 190, 190);
