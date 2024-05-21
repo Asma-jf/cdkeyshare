@@ -13,6 +13,14 @@ function Product() {
       setProduct(data);
     });
   }, []);
+  console.log(
+    <img
+      className="text-center"
+      src={product?.image}
+      alt="عکس نمایش داده نمیشود"
+    />
+  );
+
   return (
     <>
       <Container>
@@ -20,8 +28,8 @@ function Product() {
         <div>{product?.price}</div>
         <div>{product?.description}</div>
         <img
-          className="text-center"
-          src="{product?.image}"
+          className="h-6 w-7"
+          src={product?.image}
           alt="عکس نمایش داده نمیشود"
         />
       </Container>
