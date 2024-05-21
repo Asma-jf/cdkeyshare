@@ -78,7 +78,7 @@ function Navbar() {
       </div>
       {/* main navbar */}
       <div className={styled.main_navbar}>
-        <ul className="flex">
+        <ul className="flex items-center">
           <li className="flex flex-row items-center justify-center">
             <Home size={18} />
             <Link to="/">خانه</Link>

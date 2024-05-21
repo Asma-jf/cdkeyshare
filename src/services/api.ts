@@ -4,10 +4,10 @@ const client = axios.create({
   baseURL: "http://localhost:8000",
 });
 export async function getProducts() {
-  const { data } = await client("/product");
+  const { data } = await client("/products");
   return data;
 }
 export async function getsingleproduct(id: string | number) {
-  const { data } = await client(`/product/${id}`);
+  const { data } = await client(`/products/${id}`);
   return data;
 }

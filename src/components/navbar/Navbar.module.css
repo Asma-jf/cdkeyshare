@@ -233,7 +233,7 @@ a {
   visibility: hidden;
 }
 .subMenu li {
-  padding: 10px 0;
+  padding: 10px 0px;
 }
 .mainMenu li:hover .subMenu {
   visibility: visible;
@@ -252,4 +252,7 @@ a {
   padding-left: 0 !important;
   background: linear-gradient(33deg, #09a5d2 0%, #7c3eb1 80%) !important;
   color: #fff !important;
+}
+.main_navbar li {
+  padding: 0 10px;
 }

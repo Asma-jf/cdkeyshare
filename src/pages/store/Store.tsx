@@ -36,7 +36,7 @@ function Store() {
             </button>
           </form>
           <div className="grid grid-cols-12 mt-10">
-            <aside className="col-span-4">
+            <aside className="col-span-3">
               <h4 className="text-center">
                 <span className="text-center">پلتفرم ها</span>
                 <div className={styled.cont1}>
@@ -123,12 +123,12 @@ function Store() {
                 </div>
               </h4>
               <div className="banners text-center divcont">
-                <img src="src\assets\img\prize.png" alt="" />
+                <img className="mb-10" src="src\assets\img\prize.png" alt="" />
                 <img src="src\assets\img\banner5-1.png" alt="" />
               </div>
             </aside>
-            <div className="col-span-8 bg-slate-400">
-              <div className="grid grid-cols-4 gap-4">
+            <div className="col-span-9 pl-10">
+              <div className="grid grid-cols-6 gap-0">
                 {products.map((item) => (
                   <Link to={`/products/${item.id}`}>
                     <Productitem {...item} />
