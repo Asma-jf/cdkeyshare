@@ -5,6 +5,7 @@ import { products } from "../../types/servers";
 import styled from "/src/pages/product/product.module.css";
 import { ChevronLeft, FileText } from "lucide-react";
 import { Tabs } from "antd";
+import TabsExample from "../tab/TabExample";
 function Product() {
   const [product, setProduct] = useState<products>();
   const params = useParams<{ id: string }>();
@@ -100,80 +101,15 @@ function Product() {
           <img src="/src/assets/img/banner5-1.png" alt="" />
           <img src="/src/assets/img/prize.png" alt="" />
         </aside>
-        <div className={styled.section2}>
-          <ul className="flex">
-            <li>
-              <a href="" className="flex items-center">
-                <FileText /> <span>توضیحات</span>
-              </a>
-              <i className={styled.left}></i>
-            </li>
-            <li className="mr-10">
-              <a href="" className="flex items-center">
-                <FileText /> <span> نحوه دریافت سفارش</span>
-              </a>
-              <i className={styled.left}></i>
-            </li>
-            <li className="mr-10">
-              <a href="" className="flex items-center">
-                <FileText /> <span>برچسب ها</span>
-              </a>
-              <i className={styled.left}></i>
-            </li>
-          </ul>
-          <article>
-            <h2 className="mb-8 mt-5">تغییر ریجن اکانت اپیک گیمز Epic games</h2>
-            <img src="/src/assets/img/rigen.jpg" alt="" />
-          </article>
+        <TabsExample />
+        <div className={styled.slider}>
+          <div className={styled.title}>
+            <img src="/src/assets/img/shuffle.png" alt="" />
+            <span className="mr-7 ml-3">محصولات مرتبط</span>
+            <span className={styled.line}></span>
+            <span className="mr-4 text-gray-600">RELATED</span>
+          </div>
         </div>
-      </div>
-      <div className={styled.tabssection}>
-        <Tabs className="block p-7">
-          <Tabs.TabPane
-            tab={
-              <div className="relative ml-10">
-                <div className={styled.tabpane}>
-                  <FileText />
-                  <span>توضیحات</span>
-                </div>
-                <i className={styled.goosh}></i>
-              </div>
-            }
-            key="1"
-          >
-            1st TAB PANE Content
-          </Tabs.TabPane>
-          <Tabs.TabPane
-            tab={
-              <div className="relative ml-10">
-                <i className={styled.gooshr}></i>
-                <div className={styled.tabpane}>
-                  <FileText />
-                  <span>نحوه دریافت سفارش</span>
-                </div>
-                <i className={styled.goosh}></i>
-              </div>
-            }
-            key="2"
-          >
-            2nd TAB PANE Content
-          </Tabs.TabPane>
-          <Tabs.TabPane
-            tab={
-              <div className="relative ml-10">
-                <i className={styled.gooshr}></i>
-                <div className={styled.tabpane}>
-                  <FileText />
-                  <span>برچسب ها</span>
-                </div>
-                <i className={styled.goosh}></i>
-              </div>
-            }
-            key="3"
-          >
-            3rd TAB PANE Content
-          </Tabs.TabPane>
-        </Tabs>
       </div>
     </>
   );

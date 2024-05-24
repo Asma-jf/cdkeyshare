@@ -172,3 +172,17 @@
 .tabssection {
   background-color: #f9f9f9;
 }
+.slider {
+  margin-right: 350px;
+  margin-top: 50px;
+  width: 950px;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.line {
+  border: 1px solid #e5e5f0;
+  height: 1px;
+  width: 66%;
+}

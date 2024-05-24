@@ -1,0 +1,83 @@
+.active {
+  li {
+    background-color: white;
+    border-radius: 23px 23px 0 0;
+  }
+  li span,
+  svg {
+    color: #5141f5;
+  }
+  .goosh {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .goosh::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    background-color: #fafafc;
+    width: 23px;
+    height: 23px;
+    border-bottom-right-radius: 23px;
+    z-index: 3;
+  }
+  .goosh::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    background-color: #fff;
+    width: 23px;
+    height: 23px;
+    z-index: 2;
+  }
+  .gooshr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .gooshr::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 23px;
+    height: 23px;
+    z-index: 2;
+  }
+  .gooshr::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fafafc;
+    width: 23px;
+    height: 23px;
+    border-bottom-left-radius: 23px;
+    z-index: 3;
+  }
+}
+li {
+  position: relative;
+  padding: 10px 13px;
+}
+.tab {
+  cursor: pointer;
+}
+.contenttab {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+li span {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.bg-white.p-5.pt-8.pb-10.rounded-b-3xl.rounded-l-3xl h2 {
+  color: #5141f5;
+  margin-bottom: 19px;
+}
