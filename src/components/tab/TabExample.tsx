@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "/src/pages/tab/TabExample.css";
+import "/src/components/tab/TabExample.css";
 import { FileText } from "lucide-react";
-import styled from "/src/pages/tab/TabExample.css";
 interface TabContent {
   [key: string]: string;
 }

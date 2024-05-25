@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { getsingleproduct } from "../../services/api";
 import { products } from "../../types/servers";
 import styled from "/src/pages/product/product.module.css";
-import { ChevronLeft, FileText } from "lucide-react";
-import { Tabs } from "antd";
-import TabsExample from "../tab/TabExample";
+import { ChevronLeft } from "lucide-react";
+import TabsExample from "../../components/tab/TabExample";
+import Slider from "/src/components/slider/Sliser.tsx";
 function Product() {
   const [product, setProduct] = useState<products>();
   const params = useParams<{ id: string }>();
@@ -109,6 +109,7 @@ function Product() {
             <span className={styled.line}></span>
             <span className="mr-4 text-gray-600">RELATED</span>
           </div>
+          <Slider />
         </div>
       </div>
     </>

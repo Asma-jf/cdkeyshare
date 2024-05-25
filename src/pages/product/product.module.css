@@ -175,14 +175,19 @@
 .slider {
   margin-right: 350px;
   margin-top: 50px;
-  width: 950px;
+  width: 900px;
+  height: 400px;
 }
 .title {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 .line {
   border: 1px solid #e5e5f0;
   height: 1px;
   width: 66%;
+}
+.swiper.swiper-initialized.swiper-horizontal.swiper-rtl {
+  height: 360px !important;
 }
