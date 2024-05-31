@@ -1,4 +1,20 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.swiper.swiper-initialized.swiper-horizontal.swiper-rtl {
+  height: 360px !important;
+}
+swiper {
+  height: 360px !important;
+}
+.swiper-pagination-bullet {
+  height: 9px !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  width: 18px !important;
+  background-image: linear-gradient(45deg, #5439f7 40%, #1eced4 80%) !important;
+  box-shadow: 0px 0px 10px #5439f7;
+  border-radius: 30px !important;
+}

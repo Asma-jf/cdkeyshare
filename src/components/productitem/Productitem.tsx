@@ -2,7 +2,7 @@ import { products } from "../../types/servers";
 import styled from "../productitem/Productitem.module.css";
 type tproductitem = products;
 
-function ProductItem({ image, title, price, description }: tproductitem) {
+function Productitem({ image, title, price, description }: tproductitem) {
   return (
     <div className={styled.cart}>
       <img src={image} alt="" />
@@ -20,4 +20,4 @@ function ProductItem({ image, title, price, description }: tproductitem) {
   );
 }
 
-export default ProductItem;
+export default Productitem;

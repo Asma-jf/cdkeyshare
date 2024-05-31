@@ -5,23 +5,25 @@ import { products } from "../../types/servers";
 import styled from "/src/pages/product/product.module.css";
 import { ChevronLeft } from "lucide-react";
 import TabsExample from "../../components/tab/TabExample";
-import Slider from "/src/components/slider/Sliser.tsx";
+import Slider from "../../components/slider/Slider";
+import { useShoppingcartcontext } from "../../context/Shoppingcartcontext";
+
 function Product() {
   const [product, setProduct] = useState<products>();
   const params = useParams<{ id: string }>();
+  const {
+    cartitems,
+    handleIncreaseProductqty,
+    handleDecreaseproductqty,
+    getproductqty,
+  } = useShoppingcartcontext();
 
   useEffect(() => {
     getsingleproduct(params.id as string).then((data) => {
       setProduct(data);
     });
   }, []);
-  console.log(
-    <img
-      className="text-center"
-      src={product?.image}
-      alt="عکس نمایش داده نمیشود"
-    />
-  );
+  console.log(cartitems);
 
   return (
     <>
@@ -89,8 +91,28 @@ function Product() {
                 <span className={styled.badgeScore}>100 امتیاز </span>
                 <span className="text-sm">بدست می‌آورید</span>
               </div>
-              <form className="border rounded-2xl my-8 mx-3 p-1 w-45" action="">
-                <input placeholder="1" min={0} className="p-1" type="number" />
+
+              <div className="border rounded-2xl flex justify-between items-center p-3 m-3">
+                <button
+                  onClick={() =>
+                    handleIncreaseProductqty(parseInt(params.id as string))
+                  }
+                >
+                  +{" "}
+                </button>
+
+                <button>{getproductqty(parseInt(params.id as string))}</button>
+
+                <button
+                  onClick={() =>
+                    handleDecreaseproductqty(parseInt(params.id as string))
+                  }
+                >
+                  -{" "}
+                </button>
+              </div>
+              <form className="border rounded-2xl my-8 mx-3 p-1 w-64" action="">
+                <button id="add">افزودن به سبد خرید</button>
               </form>
             </div>
           </div>

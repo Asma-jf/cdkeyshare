@@ -4,11 +4,8 @@ import Container from "../container/Container";
 import styled from "./Navbar.module.css";
 import logo from "../../assets/img/logo-min.png";
 import { ChevronDown, Home, Search, Store } from "lucide-react";
+import { useShoppingcartcontext } from "../../context/Shoppingcartcontext";
 function Navbar() {
-  // const [isClose, setIsClose] = useState(true);
-  // const toggleNavbar = () => {
-  //   setIsclose(!isClose);
-  // };
   function handleClose(): void {
     const drawer = document.getElementById("drawer");
     if (drawer) {
@@ -16,7 +13,6 @@ function Navbar() {
       const maxHeight = computedStyle.getPropertyValue("max-height");
       const currentMaxHeightPx = parseFloat(maxHeight || "0");
       console.log(currentMaxHeightPx);
-      // Parse the numeric part of the string
       if (currentMaxHeightPx === 105.5) {
         drawer.style.maxHeight = "0px";
       } else {
@@ -30,6 +26,7 @@ function Navbar() {
   const toggleVisibility = () => {
     setIsVisible(!isVisible); // Toggle the state
   };
+  const { cartqty } = useShoppingcartcontext();
 
   return (
     // notification navbar
@@ -187,11 +184,13 @@ function Navbar() {
                 </svg>
               </div>
             </div>
-            <div className={styled.basket}>
-              <i className={styled.fa_basket}></i>
-              <span>سبد خرید</span>
-              <span>0</span>
-            </div>
+            <Link to="/cart">
+              <div className={styled.basket}>
+                <i className={styled.fa_basket}></i>
+                <span>سبد خرید</span>
+                <span>{cartqty}</span>
+              </div>
+            </Link>
           </div>
         </div>
         <div className={styled.mainMenu}>
