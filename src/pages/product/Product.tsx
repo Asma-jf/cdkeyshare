@@ -10,6 +10,7 @@ import { useShoppingcartcontext } from "../../context/Shoppingcartcontext";
 
 function Product() {
   const [product, setProduct] = useState<products>();
+  const [addAmount, setAddAmount] = useState(0);
   const params = useParams<{ id: string }>();
   const {
     cartitems,
@@ -24,6 +25,14 @@ function Product() {
     });
   }, []);
   console.log(cartitems);
+  const handleClickAdd = (amount: number) => {
+    if (amount > 0) {
+      handleIncreaseProductqty(parseInt(params.id as string), amount);
+    }
+    if (amount < 0) {
+      handleDecreaseproductqty(parseInt(params.id as string), -1 * amount);
+    }
+  };
 
   return (
     <>
@@ -94,26 +103,39 @@ function Product() {
 
               <div className="border rounded-2xl flex justify-between items-center p-3 m-3">
                 <button
-                  onClick={() =>
-                    handleIncreaseProductqty(parseInt(params.id as string))
-                  }
+                  onClick={() => {
+                    // handleIncreaseProductqty(
+                    //   parseInt(params.id as string),
+                    //   addOrDeleteAmount
+                    // );
+                    setAddAmount((prev) => prev + 1);
+                  }}
                 >
                   +{" "}
                 </button>
 
-                <button>{getproductqty(parseInt(params.id as string))}</button>
+                {/* <button>{getproductqty(parseInt(params.id as string))}</button> */}
+                <p>{addAmount}</p>
 
                 <button
-                  onClick={() =>
-                    handleDecreaseproductqty(parseInt(params.id as string))
-                  }
+                  onClick={() => {
+                    // handleDecreaseproductqty(
+                    //   parseInt(params.id as string),
+                    //   addOrDeleteAmount
+                    // );
+                    setAddAmount((prev) => prev - 1);
+                  }}
                 >
                   -{" "}
                 </button>
               </div>
-              <form className="border rounded-2xl my-8 mx-3 p-1 w-64" action="">
-                <button id="add">افزودن به سبد خرید</button>
-              </form>
+              <button
+                onClick={() => handleClickAdd(addAmount)}
+                className="bg-blue-600 p-3 text-white rounded-lg hover:bg-purple-500"
+                id="add"
+              >
+                افزودن به سبد خرید
+              </button>
             </div>
           </div>
         </div>

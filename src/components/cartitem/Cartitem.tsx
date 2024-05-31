@@ -48,13 +48,13 @@ function Cartitem({ id, qty }: icartitem) {
                   </td>
                   <td className="p-2 text-center">
                     <div className="border rounded-2xl flex justify-between items-center p-3 m-3">
-                      <button onClick={() => handleIncreaseProductqty(id)}>
+                      <button onClick={() => handleIncreaseProductqty(id, 1)}>
                         +{" "}
                       </button>
 
                       <button>{qty}</button>
 
-                      <button onClick={() => handleDecreaseproductqty(id)}>
+                      <button onClick={() => handleDecreaseproductqty(id, 1)}>
                         -{" "}
                       </button>
                     </div>

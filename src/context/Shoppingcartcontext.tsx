@@ -10,8 +10,8 @@ interface cartitem {
 }
 interface ishoppingcartcontext {
   cartitems: cartitem[];
-  handleIncreaseProductqty: (id: number) => void;
-  handleDecreaseproductqty: (id: number) => void;
+  handleIncreaseProductqty: (id: number, amount: number) => void;
+  handleDecreaseproductqty: (id: number, amount: number) => void;
   getproductqty: (id: number) => number;
   handleromoveproduct: (id: number) => void;
   cartqty: number;
@@ -27,7 +27,7 @@ export function ShoppingCartProvider({ children }: ishoppingcartprovider) {
     []
   );
 
-  const handleIncreaseProductqty = (id: number) => {
+  const handleIncreaseProductqty = (id: number, amount: number) => {
     setCartitems((currentItem) => {
       let selecteditem = currentItem.find((item) => item.id == id);
       if (selecteditem == null) {
@@ -35,7 +35,7 @@ export function ShoppingCartProvider({ children }: ishoppingcartprovider) {
       } else {
         return currentItem.map((item) => {
           if (item.id == id) {
-            return { ...item, qty: item.qty + 1 };
+            return { ...item, qty: item.qty + amount };
           } else {
             return item;
           }
@@ -43,15 +43,17 @@ export function ShoppingCartProvider({ children }: ishoppingcartprovider) {
       }
     });
   };
-  const handleDecreaseproductqty = (id: number) => {
+  const handleDecreaseproductqty = (id: number, amount: number) => {
     setCartitems((currentItem) => {
       let selecteditem = currentItem.find((item) => item.id == id);
       if (selecteditem?.qty === 1) {
         return currentItem.filter((Item) => Item.id !== id);
       } else {
         return currentItem.map((item) => {
-          if (item.id == id) {
-            return { ...item, qty: item.qty - 1 };
+          if (item.id == id && item.qty <= amount) {
+            return { ...item, qty: 0 };
+          } else if (item.id == id && item.qty > amount) {
+            return { ...item, qty: item.qty - amount };
           } else {
             return item;
           }
