@@ -31,7 +31,7 @@ export function ShoppingCartProvider({ children }: ishoppingcartprovider) {
     setCartitems((currentItem) => {
       let selecteditem = currentItem.find((item) => item.id == id);
       if (selecteditem == null) {
-        return [...currentItem, { id: id, qty: 1 }];
+        return [...currentItem, { id: id, qty: amount }];
       } else {
         return currentItem.map((item) => {
           if (item.id == id) {

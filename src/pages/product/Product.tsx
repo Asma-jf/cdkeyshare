@@ -29,9 +29,6 @@ function Product() {
     if (amount > 0) {
       handleIncreaseProductqty(parseInt(params.id as string), amount);
     }
-    if (amount < 0) {
-      handleDecreaseproductqty(parseInt(params.id as string), -1 * amount);
-    }
   };
 
   return (
@@ -123,7 +120,7 @@ function Product() {
                     //   parseInt(params.id as string),
                     //   addOrDeleteAmount
                     // );
-                    setAddAmount((prev) => prev - 1);
+                    setAddAmount((prev) => (prev > 1 ? prev - 1 : prev));
                   }}
                 >
                   -{" "}
