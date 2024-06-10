@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+._mainMenu_1lyck_421 li span {
+  padding: 0 !important;
+}
+._main_navbar_1lyck_123 {
+  align-items: center;
+}
+.z-index-1000 {
+  z-index: 1000;
+}
 .swiper.swiper-initialized.swiper-horizontal.swiper-rtl {
   height: 360px !important;
 }
